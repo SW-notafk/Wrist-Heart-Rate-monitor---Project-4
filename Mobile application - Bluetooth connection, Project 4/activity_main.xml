@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/blue_background"
+    tools:context=".MainActivity">
+
+    <!-- Show if the bluetooth is available or not -->
+    <TextView
+        android:id="@+id/statusBluetoothTv"
+        android:layout_width="6dp"
+        android:layout_height="11dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/BluetoothTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Bluetooth on/off icon -->
+
+    <!-- On button -->
+
+    <!-- Off button -->
+
+    <ImageView
+        android:id="@+id/BluetoothTv"
+        android:layout_width="200dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/onBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusBluetoothTv" />
+
+    <Button
+        android:id="@+id/onBtn"
+        android:layout_width="270dp"
+        android:layout_height="58dp"
+        android:textSize="20sp"
+        android:backgroundTint="@android:color/black"
+        android:minWidth="200dp"
+        android:text="@string/turn_on"
+        app:layout_constraintBottom_toTopOf="@+id/offBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BluetoothTv" />
+
+    <Button
+        android:id="@+id/offBtn"
+        android:backgroundTint="@android:color/black"
+        android:layout_width="270dp"
+        android:layout_height="58dp"
+        android:textSize="20sp"
+        android:minWidth="200dp"
+        android:text="@string/turn_off"
+        app:layout_constraintBottom_toTopOf="@+id/discoverableBtn"
+        app:layout_constraintStart_toStartOf="@+id/onBtn"
+        app:layout_constraintTop_toBottomOf="@+id/onBtn" />
+
+    <!-- Discover button -->
+    <Button
+        android:id="@+id/discoverableBtn"
+        android:backgroundTint="@android:color/black"
+        android:layout_width="270dp"
+        android:layout_height="58dp"
+        android:textSize="20sp"
+        android:minWidth="200dp"
+        android:text="@string/discover"
+        app:layout_constraintBottom_toTopOf="@+id/pairedBtn"
+        app:layout_constraintStart_toStartOf="@+id/offBtn"
+        app:layout_constraintTop_toBottomOf="@+id/offBtn" />
+
+    <!-- Get list of paired devices -->
+    <Button
+        android:id="@+id/pairedBtn"
+        android:backgroundTint="@android:color/black"
+        android:layout_width="270dp"
+        android:layout_height="58dp"
+        android:textSize="20sp"
+        android:minWidth="200dp"
+        android:text="@string/paired_devices"
+        app:layout_constraintBottom_toTopOf="@+id/PairedTv"
+        app:layout_constraintStart_toStartOf="@+id/discoverableBtn"
+        app:layout_constraintTop_toBottomOf="@+id/discoverableBtn" />
+
+    <!-- Show paired devices -->
+    <TextView
+        android:id="@+id/PairedTv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:minWidth="200dp"
+        android:text=" "
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/previous_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pairedBtn" />
+
+    <!-- Go to the main menu button -->
+    <Button
+        android:id="@+id/previous_button"
+        android:backgroundTint="@android:color/black"
+        android:layout_width="270dp"
+        android:layout_height="58dp"
+        android:textSize="20sp"
+        android:minWidth="200dp"
+        android:text="@string/go_to_main_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.951" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
